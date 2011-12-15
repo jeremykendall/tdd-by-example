@@ -1,10 +1,16 @@
 import xunit
 
 class TestCaseTest(xunit.TestCase):
-    def testRunning(self):
-        test= xunit.WasRun("testMethod")
-        assert(not test.wasRun)
-        test.run()
-        assert(test.wasRun)
+    def setUp(self):
+        self.test= xunit.WasRun("testMethod")
+    
+    def testSetUp(self):
+        self.test.run()
+        assert(self.test.wasSetUp)
         
-TestCaseTest("testRunning").run()    
+    def testRunning(self):
+        self.test.run()
+        assert(self.test.wasRun)
+        
+TestCaseTest("testSetUp").run()
+TestCaseTest("testRunning").run()
