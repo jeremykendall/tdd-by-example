@@ -1,3 +1,5 @@
+from testresult import TestResult
+
 class TestCase:
     def __init__(self, name):
         self.name= name
