@@ -22,9 +22,6 @@ class TestCaseTest(xunit.TestCase):
         result.testFailed()
         assert("1 run, 1 failed" == result.summary())
         
-    def testExceptionThrownInSetUp(self):
-        test = xunit.WasRun()
-        
 # Kent starts Chapter 23 by mentioning how ratty this looks (I cheated 
 # and looked ahead), but I don't see where he ever showed us that he was
 # printing the summaries like he is below.  I updated it early because I wanted
